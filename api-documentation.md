@@ -4,78 +4,94 @@ Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
 
 ## Overview
 
-| Resource         | Method | Endpoint                      | Description                                           |
-|------------------|--------|-------------------------------|-------------------------------------------------------|
-| `suggestions`    | GET    | /get-all-suggestions          | ___________________                             |
-| `suggestions`    | GET    | /get-suggestions-by-category  | ___________________                             |
-| `suggestions`    | POST   | /add-one-suggestion           | ___________________                             |
+| Resource      | Method | Endpoint                     | Description                                      |
+| ------------- | ------ | ---------------------------- | ------------------------------------------------ |
+| `suggestions` | GET    | /get-all-suggestions         | Retrieves all suggestions.                       |
+| `suggestions` | GET    | /get-suggestions-by-category | Retrieves all suggestions in specified category. |
+| `suggestions` | POST   | /add-one-suggestion          | Adds one suggestions.                            |
 
 ---
 
 ### 🔹 GET `/get-all-suggestions`
 
-**Description:** ___________________
+**Description:** Retrieves all suggestions.
 
-**Example Request URL:** 
+**Example Request URL:**
 
 ```json
-Write the example request URL here
+http://localhost:3000/get-all-suggestions
 ```
 
 **Example Response:**
 
 ```json
-Write the data returned by this endpoint. 
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object. 
+[
+  {
+    "id": 1,
+    "title": "Add tags for solutions",
+    "category": "enhancement",
+    "detail": "Easier to search for solutions based on a specific stack."
+  }
+]
 ```
 
 ---
 
 ### 🔹 GET `/get-suggestions-by-category/:category`
 
-**Description:** ___________________
+**Description:** Retrieves all suggestions in specified category.
 
-**Example Request URL:** 
+**Example Request URL:**
 
 ```json
-Write the example request URL here
+http://localhost:3000/get-suggestions-by-category/:category
 ```
 
 **Example Response:**
 
 ```json
-Write the data returned by this endpoint. 
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object. 
+[
+  {
+    "id": 2,
+    "title": "Add a dark theme option",
+    "category": "feature",
+    "detail": "It would help people with light sensitivities and who prefer dark mode."
+  },
+  {
+    "id": 4,
+    "title": "Ability to follow others",
+    "category": "feature",
+    "detail": "Stay updated on comments and solutions other people post."
+  }
+]
 ```
 
 ---
 
 ### 🔹 POST `/add-one-suggestion`
 
-**Description:** ___________________
+**Description:** Adds one suggestion.
 
-**Example Request URL:** 
+**Example Request URL:**
 
 ```json
-Write the example request URL here
+http://localhost:3000/add-one-suggestion
 ```
 
 **Example Request Body:**
 
 ```json
-Write the data required in the request body. 
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object. 
+{
+  "title": "Add sparkles",
+  "category": "enhancement",
+  "detail": "Adding sparkles will make the website more cute/pretty!"
+}
 ```
 
 **Example Response:**
 
 ```json
-Write the data returned by this endpoint. 
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object. 
+Success! Suggestion was added.
 ```
----
 
+---
