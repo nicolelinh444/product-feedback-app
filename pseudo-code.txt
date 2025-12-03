@@ -1,0 +1,37 @@
+-------------------------------------
+🐯 PRODUCT FEEDBACK APP PSEUDO-CODE 🐯
+-------------------------------------
+
+// Home Page
+
+⭐ Vertical NavBar ⭐
+- "My Company" Div
+- API call get-suggestions-by/:category to filter by category (All, UI, UX, Enhancement, Bug, Feature), buttons with link for each category
+
+⭐ Horizontal NavBar ⭐
+- Number of suggestions
+- Add feedback button
+
+When the app loads, call the API to retrieve get-all-suggestions
+
+✨ Create Cards ✨
+- Title
+- Detail
+- Category (Button)
+
+// Feedback Form Page
+When the user clicks add feedback, navigate to "Create New Feedback" form
+
+-- Feedback Title
+-- Category
+    * Drop Down Menu * 
+-- Detail
+
+🔘 Cancel Button
+🔘 Add Feedback Button
+
+❌ No Feedback
+- Image
+- "There is no feedback yet"
+- "Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app."
+- Add feedback button/link
