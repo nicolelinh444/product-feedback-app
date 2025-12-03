@@ -9,7 +9,7 @@
 - API call get-suggestions-by/:category to filter by category (All, UI, UX, Enhancement, Bug, Feature), buttons with link for each category
 
 ⭐ Horizontal NavBar ⭐
-- Number of suggestions
+- Number of suggestions (Get length of the get all suggestions array)
 - Add feedback button
 
 When the app loads, call the API to retrieve get-all-suggestions
