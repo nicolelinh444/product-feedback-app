@@ -43,6 +43,12 @@ async function getSuggestionByCategory(category) {
 }
 
 // 3. POST /add-one-suggestion
+async function addOneSuggestion(title, category, detail) {
+  await db.query(
+    "INSERT INTO suggestions (title, category, detail) VALUES ($1, $2, $3)",
+    [title, category, detail]
+  );
+}
 
 /*----------------------------------
 API Endpoints
@@ -62,3 +68,10 @@ app.get("/get-suggestions-by-category/:category", async (req, res) => {
 });
 
 // 3. POST /add-one-suggestion
+app.post("/add-one-suggestion", async (req, res) => {
+  const { title, category, detail } = req.body;
+
+  await addOneSuggestion(title, category, detail);
+
+  res.send("Success! Pantry item was added.");
+});
