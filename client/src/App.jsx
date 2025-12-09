@@ -1,8 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Feedback from "./pages/Feedback";
-import FeedbackCard from "./components/FeedbackCard";
 
 function App() {
   // useState variable for feedback, set to an empty array
@@ -20,6 +19,10 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    getFeedbackInfo();
+  }, []);
+
   return (
     <div>
       <nav>
@@ -28,13 +31,21 @@ function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">Feedback</Link>
+            <Link to="/feedback">Feedback</Link>
           </li>
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/" element={<Home feedbackInfo={feedbackInfo} />} />
+        <Route
+          path="/feedback"
+          element={
+            <Feedback
+              feedbackInfo={feedbackInfo}
+              setFeedbackInfo={setFeedbackInfo}
+            />
+          }
+        />
       </Routes>
     </div>
   );
