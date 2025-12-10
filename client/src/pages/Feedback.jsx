@@ -8,7 +8,7 @@ export default function Feedback() {
   const [formData, setFormData] = useState(emptyFormState);
   const [suggestion, setSuggestion] = useState(null);
 
-   // update formData object when user changes input field
+  // update formData object when user changes input field
   const handleChange = (event) => {
     // gets input field's name and value
     const { name, value } = event.target;
@@ -16,7 +16,7 @@ export default function Feedback() {
     setFormData({ ...formData, [name]: value });
   };
 
-    // storeUserData from user's form input
+  // storeUserData from user's form input
   const storeSuggestion = async () => {
     const response = await fetch("/api/add-one-suggestion", {
       method: "POST",
@@ -26,7 +26,7 @@ export default function Feedback() {
       body: JSON.stringify({
         title: formData.title,
         category: formData.category,
-        detail: formData.detail
+        detail: formData.detail,
       }),
     });
   };
@@ -44,14 +44,23 @@ export default function Feedback() {
     setFormData(emptyFormState);
   };
 
+  // make cancel button functional
+  const handleCancel = () => {
+    setFormData(emptyFormState); // clears form inputs
+  };
 
   return (
-  <div className="form-container">
+    <div className="form-container">
       <h2>Create New Feedback></h2>
       <br />
       {/* feedback form  */}
       <form onSubmit={handleSubmit}>
         {/* title input */}
+        <p>
+          <b>Feedback Title</b>
+          <br />
+          Add a short, descriptive headline
+        </p>
         <input
           required
           type="text"
@@ -62,50 +71,46 @@ export default function Feedback() {
         />
         <br />
         {/* category input */}
-       <select name="category" id="category" onChange=(handleChange)>
-           <option value="feature">Feature</option>
-           <option value="">Two</option>
-           <option value="3">Three</option>
-       </select>
-        <input
-          required
-          type="email"
-          name="email"
-          id="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
+        <p>
+          <b>Category</b>
+          <br />
+          Choose a category for your feedback
+        </p>
+        <select name="category" id="category" onChange={handleChange}>
+          <option value="feature">Feature</option>
+          <option value="ui">UI</option>
+          <option value="enhancement">Enhancement</option>
+          <option value="bug">Bug</option>
+        </select>
         <br />
-        {/* country input */}
-        <input
-          required
-          placeholder="Country"
-          type="text"
-          name="country"
-          id="country"
-          value={formData.country}
-          onChange={handleChange}
-        />
-        <br />
-        {/* bio input */}
+        {/* detail input */}
+        <p>
+          <b>Feedback Detail</b>
+          <br />
+          Include any specific comments on what should be improved, added, etc.
+        </p>
         <textarea
           rows="10"
           cols="45"
-          placeholder="Bio"
           type="text"
-          name="bio"
-          id="bio"
-          value={formData.bio}
+          name="detail"
+          id="detail"
+          value={formData.detail}
           onChange={handleChange}
         />
         <br />
         <br />
+
+        {/* CANCEL BUTTON HERE */}
+        <button type="button" onClick={handleCancel}>
+          Cancel
+        </button>
+
         {/* submit button */}
         <button className="button" type="submit">
           Submit
         </button>
       </form>
     </div>
-
-)
+  );
 }
