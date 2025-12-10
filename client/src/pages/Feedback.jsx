@@ -101,7 +101,7 @@ export default function Feedback() {
         <br />
         <br />
 
-        {/* CANCEL BUTTON HERE */}
+        {/* cancel button */}
         <button type="button" onClick={handleCancel}>
           Cancel
         </button>
