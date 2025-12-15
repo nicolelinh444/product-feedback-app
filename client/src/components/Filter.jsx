@@ -1,17 +1,15 @@
 import { useState } from "react";
 
 export default function Filter({ onFilter, activeCategory }) {
-  const categories = ["all", "ui", "bug", "feature", "enhancement"];
+  const categories = ["All", "UI", "UX", "Bug", "Feature", "Enhancement"];
 
   return (
-    <div className="filters">
+    <div className="filter-container">
       {categories.map((item) => (
         <button
           key={item}
           onClick={() => onFilter(item)}
-          className={`filter-buttons ${
-            activeCategory === item ? "active" : ""
-          }`}
+          className={`category-btn ${activeCategory === item ? "active" : ""}`}
         >
           {item}
         </button>

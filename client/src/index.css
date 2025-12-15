@@ -1,7 +1,9 @@
 /* Global styles (this affects the whole application) */
 
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Jost;
   line-height: 1.5;
   font-weight: 400;
 
@@ -9,4 +11,40 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --white: #ffffff;
+  --light-grey-1: #f7f8fd;
+  --light-grey-2: #f2f4ff;
+  --dark-grey-1: #647196;
+  --dark-grey-2: #3a4374;
+  --dark-grey-2-hover: #656ea3;
+  --dark-grey-3: #373f68;
+  --purple: #ad1fea;
+  --purple-hover: #c75af6;
+  --sky-blue: #63bdfa;
+  --cobalt-blue: #4661e6;
+  --cobalt-blue-hover: #7c91f9;
+  --peach: #f49f85;
+  --red: #d73737;
+  --tablet: 800px;
+  --mobile: 570px;
+  --tiny: 362px;
+  --border-radius: 10px;
+  --box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294);
+  --box-shadow-hover: 0px 0px 14px 7px rgba(0, 0, 0, 0.0294);
+  --gradient: linear-gradient(
+    90deg,
+    var(--sky-blue) 0%,
+    var(--purple) 57%,
+    var(--peach) 100%
+  );
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }

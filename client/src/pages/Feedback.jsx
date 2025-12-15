@@ -1,5 +1,6 @@
 // pages/Feedback.jsx
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Feedback() {
   // initial form state (starts as empty strings)
@@ -50,9 +51,11 @@ export default function Feedback() {
   };
 
   return (
-    <div className="form-container">
-      <h2>Create New Feedback></h2>
-      <br />
+    <div className="feedback-page">
+      <Link to="/" className="back-link">
+        ← Go Back
+      </Link>
+      <h2>Create New Feedback</h2>
       {/* feedback form  */}
       <form onSubmit={handleSubmit}>
         {/* title input */}
@@ -77,10 +80,11 @@ export default function Feedback() {
           Choose a category for your feedback
         </p>
         <select name="category" id="category" onChange={handleChange}>
-          <option value="feature">Feature</option>
-          <option value="ui">UI</option>
-          <option value="enhancement">Enhancement</option>
-          <option value="bug">Bug</option>
+          <option value="Feature">Feature</option>
+          <option value="UX">UX</option>
+          <option value="UI">UI</option>
+          <option value="Enhancement">Enhancement</option>
+          <option value="Bug">Bug</option>
         </select>
         <br />
         {/* detail input */}
@@ -100,16 +104,17 @@ export default function Feedback() {
         />
         <br />
         <br />
+        <div className="form-btns">
+          {/* cancel button */}
+          <button type="button" className="cancel-btn" onClick={handleCancel}>
+            Cancel
+          </button>
 
-        {/* cancel button */}
-        <button type="button" onClick={handleCancel}>
-          Cancel
-        </button>
-
-        {/* submit button */}
-        <button className="button" type="submit">
-          Submit
-        </button>
+          {/* submit button */}
+          <button className="feedback-btn" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,3 +1,4 @@
+import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
@@ -25,16 +26,6 @@ function App() {
 
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/feedback">Feedback</Link>
-          </li>
-        </ul>
-      </nav>
       <Routes>
         <Route path="/" element={<Home feedbackInfo={feedbackInfo} />} />
         <Route

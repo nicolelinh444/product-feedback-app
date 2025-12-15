@@ -3,7 +3,7 @@ function FeedbackCard({ feedback }) {
     <div className="card-container">
       <h3>{feedback.title}</h3>
       <p>{feedback.detail}</p>
-      <p className="button-style">{feedback.category}</p>
+      <p className="category-btn">{feedback.category}</p>
     </div>
   );
 }

@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import FeedbackCard from "../components/FeedbackCard";
 import Filter from "../components/Filter";
+import { Link } from "react-router-dom";
 
 export default function Home({ feedbackInfo }) {
   const [feedback, setFeedback] = useState(feedbackInfo);
@@ -26,15 +27,44 @@ export default function Home({ feedbackInfo }) {
   }, [feedbackInfo]);
 
   return (
-    <>
-      <h1>Welcome to the Home Page</h1>
-      <div className="feedback-list">
-        <Filter onFilter={handleFilter} activeCategory={activeCategory} />
-
-        {feedback.map((item, index) => (
-          <FeedbackCard key={index} feedback={item} />
-        ))}
+    <div className="page-container">
+      <section className="header-container">
+        <div className="company-box">
+          <h1>My Company</h1>
+          <p>Feedback Board</p>
+        </div>
+        <div className="categories">
+          <Filter onFilter={handleFilter} activeCategory={activeCategory} />
+        </div>
+      </section>
+      <div className="card-grid">
+        <span className="suggestions-bar">
+          <h2>{feedbackInfo.length} Suggestions</h2>
+          <Link to="/feedback">
+            <button className="feedback-btn">+ Add Feedback</button>
+          </Link>
+        </span>
+        {feedback.length === 0 ? (
+          <div className="empty">
+            <img
+              src="/illustration-empty.svg"
+              alt="icon showing detective with magnifying glass"
+            />
+            <h3>There is no feedback yet.</h3>
+            <p>
+              Got a suggestion? Found a bug that needs to be squashed? We love
+              hearing about new ideas to improve our app.
+            </p>
+            <Link to="/feedback">
+              <button className="feedback-btn">+ Add Feedback</button>
+            </Link>
+          </div>
+        ) : (
+          feedback.map((item, index) => (
+            <FeedbackCard key={index} feedback={item} />
+          ))
+        )}
       </div>
-    </>
+    </div>
   );
 }
