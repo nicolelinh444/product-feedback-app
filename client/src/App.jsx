@@ -8,7 +8,7 @@ function App() {
   // useState variable for feedback, set to an empty array
   const [feedbackInfo, setFeedbackInfo] = useState([]);
 
-  // API call
+  // API call, gets all suggestions
   const getFeedbackInfo = async () => {
     try {
       const response = await fetch("/api/get-all-suggestions");
@@ -20,12 +20,14 @@ function App() {
     }
   };
 
+  // retrieve api data on page load
   useEffect(() => {
     getFeedbackInfo();
   }, []);
 
   return (
     <div>
+      {/* links */}
       <Routes>
         <Route path="/" element={<Home feedbackInfo={feedbackInfo} />} />
         <Route
