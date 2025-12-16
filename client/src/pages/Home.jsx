@@ -11,7 +11,7 @@ export default function Home({ feedbackInfo }) {
   const handleFilter = (category) => {
     setActiveCategory(category);
 
-    if (category === "all") {
+    if (category === "All") {
       setFeedback(feedbackInfo); // reset to all feedback
     } else {
       // filter feedback by category
