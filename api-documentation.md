@@ -29,7 +29,7 @@ http://localhost:3000/get-all-suggestions
   {
     "id": 1,
     "title": "Add tags for solutions",
-    "category": "enhancement",
+    "category": "Enhancement",
     "detail": "Easier to search for solutions based on a specific stack."
   }
 ]
@@ -54,13 +54,13 @@ http://localhost:3000/get-suggestions-by-category/:category
   {
     "id": 2,
     "title": "Add a dark theme option",
-    "category": "feature",
+    "category": "Feature",
     "detail": "It would help people with light sensitivities and who prefer dark mode."
   },
   {
     "id": 4,
     "title": "Ability to follow others",
-    "category": "feature",
+    "category": "Feature",
     "detail": "Stay updated on comments and solutions other people post."
   }
 ]
@@ -83,7 +83,7 @@ http://localhost:3000/add-one-suggestion
 ```json
 {
   "title": "Add sparkles",
-  "category": "enhancement",
+  "category": "Enhancement",
   "detail": "Adding sparkles will make the website more cute/pretty!"
 }
 ```
