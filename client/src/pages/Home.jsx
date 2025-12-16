@@ -23,7 +23,7 @@ export default function Home({ feedbackInfo }) {
   };
 
   useEffect(() => {
-    handleFilter("all");
+    handleFilter("All");
   }, [feedbackInfo]);
 
   return (
