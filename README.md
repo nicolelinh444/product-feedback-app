@@ -1,58 +1,5 @@
 # 📝 Product Feedback App
 
-This app is my second full-stack app ever and final project in my AnnieCannons backend course. I am excited to share what I have learned and accomplished so far.
-
-## 📌 What is a README?
-
-A `README.md` is usually the **first** thing someone sees in your repo. It gives an **overview** of what your **project** is about, how to use it, and how it works.
-
-You spent hours on your project — spend at least 30 minutes writing a clear README.
-It’s your chance to tell the world what your hard work is all about!
-
-## 🧹 Tips
-
-- Don’t overthink it! Just explain your project clearly
-- Use headers, bullet points, and links to keep it easy to read
-- Update the README if your project changes
-
-## ✨ Example of a README
-
-- Coming soon!
-
-## 🎨 Markdown Formatting Tips
-
-README files use **Markdown** (`.md`) to style content.
-
-### Common Markdown formatting:
-
-```markdown
-# H1 (Main title)
-
-## H2 (Section)
-
-### H3 (Subsection)
-
-**bold text**  
-_italic text_  
-`inline code`
-
-- bullet points
-
-1. numbered lists
-
-[Link text](https://example.com)
-
-![Alt text for image](./images/image.png)
-```
-
-# Fill Out the Template Below ⬇️
-
-Once you're done filling out the template, paste it into your Github repo's main `README.md` file!
-
----
-
-# 📝 Product Feedback App
-
 ## 📌 Project Description & Purpose
 
 This app is my second full-stack app ever and final project in my AnnieCannons backend course. I am excited to share what I have learned and accomplished so far.
