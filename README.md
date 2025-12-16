@@ -12,15 +12,7 @@ Check out the app: https://productfb-app.netlify.app/
 
 ## 🖼️ Screenshots
 
-Here is where you'll include a screenshot of your project to show it off!
-
-Your instructor will walk you through this process with the rest of the class. Please be patient until the time comes! In the meantime, you can fill out all other sections of this template.
-
-1. Use `Command + Control + Shift + 4` to take a screenshot of your site and copy the screenshot to your clipboard
-2. Find your Github README.md file on the Github website
-3. Edit the site by clicking on the Pencil icon ✏️
-4. Move your cursor to the position where you want to paste the screenshot, then paste it. Github will convert the pasted screenshot into an `<img>` tag
-5. Select "Commit changes..." to save your changes
+<img width="900" height="563" alt="Screenshot 2025-12-15 at 8 50 20 PM" src="https://github.com/user-attachments/assets/b91812d5-415d-41d7-a54d-a4d8e7540aaa" />
 
 ## ✨ Features
 
